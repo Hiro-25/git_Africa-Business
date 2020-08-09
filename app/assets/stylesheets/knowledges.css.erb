@@ -11,9 +11,11 @@ body {
 .header {
   padding: 170px 30px 80px;
   height: 100vh;
-  background-image: url(<%= asset_path('waterfall.jpg') %>);
+  background-image: url(<%= asset_path('Worldmap.jpg') %>);
   background-color:rgba(255,255,255,0.3);
-  background-blend-mode:lighten; }
+  background-blend-mode:lighten; 
+  background-repeat: no-repeat;
+	background-size: auto 100%; }
   
 h1{
     color: navy;
@@ -75,12 +77,6 @@ h4{
   height: 500vh;
   width: 500vw;
 }
-
-.knowledges {
-  height: 100vh;
-  background-image: url(<%= asset_path('construction.jpg') %>);
-  background-color:rgba(255,255,255,0.3);
-  background-blend-mode:lighten; }
 
 .contact {
   height: 30vh;
