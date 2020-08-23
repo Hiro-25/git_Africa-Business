@@ -1,0 +1,11 @@
+<div class="contents row">
+  <%= form_tag('/agricultures', method: :post) do %>
+    <h3>
+      POST
+    </h3>
+    <input type="text" name="name" placeholder="Nickname">
+    <input type="text" name="image" placeholder="Image Url">
+    <textarea name="text" placeholder="text" rows="20" cols="60"></textarea>
+    <input type="submit" value="SEND">
+  <% end %>
+</div>
