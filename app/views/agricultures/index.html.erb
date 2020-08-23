@@ -1,5 +1,12 @@
 <div class="contents row">
-    <% @knowledges.each do |knowledge| %>
-      <%= knowledge.text%>
+    <% @agricultures.each do |agriculture| %>
+      <div class="content_post" syyle="background-image: url(<%= agriculture.image %>);">
+        <%= agriculture.text%>
+        <span class="name"><%= agriculture.name %></span>
+      </div>
     <% end %>
+</div>
+
+<div class="user_nav grid-6">
+  <a class="post" href="/agricultures/new">POST</a>
 </div>
