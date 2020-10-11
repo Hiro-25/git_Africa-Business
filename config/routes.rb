@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   get   'agricultures/index_agriculture' => 'agricultures#index'
   get   'agricultures/new' => 'agricultures#new'
   post  'agricultures' => 'agricultures#create'
+  get   'educations/index_education' => 'educations#index'
+  get   'educations/new' => 'educations#new'
+  post  'educations' => 'educations#create'
 end

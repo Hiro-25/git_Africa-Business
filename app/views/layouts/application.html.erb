@@ -19,7 +19,7 @@
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-          <%= link_to "POST", "/agricultures/new", class: "post" %>
+         
         </div>
       <% else %>
         <div class="grid-6">

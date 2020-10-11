@@ -1,4 +1,5 @@
 <div class="contents">
+    <%= link_to "POST", "/agricultures/new", class: "post" %>
     <% @agricultures.each do |agriculture| %>
       <div class="contents row" style="background-image: url(<%= agriculture.image %>);">
         <%= agriculture.text%>
@@ -6,4 +7,3 @@
       </div>
     <% end %>
 </div>
-
