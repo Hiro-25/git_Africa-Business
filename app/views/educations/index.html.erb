@@ -1,0 +1,9 @@
+<div class="contents">
+    <%= link_to "POST", "/educations/new", class: "post" %>
+    <% @educations.each do |education| %>
+      <div class="contents row" style="background-image: url(<%= education.image %>);">
+        <%= education.text%>
+        <span class="name"><%= education.name %></span>
+      </div>
+    <% end %>
+</div>
