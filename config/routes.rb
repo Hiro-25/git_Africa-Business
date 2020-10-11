@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   get   'educations/index_education' => 'educations#index'
   get   'educations/new' => 'educations#new'
   post  'educations' => 'educations#create'
+  get   'arts/index_art' => 'arts#index'
+  get   'arts/new' => 'arts#new'
+  post  'arts' => 'arts#create'
 end
