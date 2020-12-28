@@ -1,0 +1,9 @@
+<div class="contents row">
+  <p><%= @nickname %>Posts list</p>
+  <% @agricultures.each do |agriculture| %>
+    <div class="content_post" style="background-image: url(<%= agriculture.image %>);">
+      <%= simple_format(agriculture.text) %>
+      <span class="name"><%= agriculture.name %></span>
+    </div>
+  <% end %>
+</div>

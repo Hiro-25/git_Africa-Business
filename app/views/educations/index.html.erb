@@ -2,8 +2,22 @@
     <%= link_to "POST", "/educations/new", class: "post" %>
     <% @educations.each do |education| %>
       <div class="contents row" style="background-image: url(<%= education.image %>);">
+        <% if user_signed_in? && current_user.id == education.user_id %>
+        <div class="more">
+          <span><%= image_tag 'arrow_top.png' %></span>
+          <ul class="more_list">
+            <li>
+              <%= link_to 'Edit', "/educations/#{education.id}/edit", method: :get %>
+            </li>
+            <li>
+              <%= link_to 'Delete', "/educations/#{education.id}", method: :delete %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
         <%= education.text%>
         <span class="name"><%= education.name %></span>
       </div>
     <% end %>
+    <%= paginate(@educations) %>
 </div>

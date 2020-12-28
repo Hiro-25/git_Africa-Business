@@ -1,0 +1,31 @@
+<div class="contents row">
+  <div class="content_post" style="background-image: url(<%= @education.image %>);">
+    <% if user_signed_in? && current_user.id == @education.user_id %>
+      <div class="more">
+        <span><%= image_tag 'arrow_top.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to 'Edit', "/educations/#{@education.id}/edit", method: :get %>
+          </li>
+          <li>
+            <%= link_to 'Delete', "/educations/#{@education.id}", method: :delete %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+    <%= simple_format(@education.text) %>
+    <span class="name">
+      <a href="/users/<%= @education.user_id %>">
+        <span>Poster</span><%= @education.user_id %>
+      </a>
+    </span>
+  </div>
+  <div class="container"> 
+    <% if current_user %>
+      <%= form_tag("/educations/#{@art.id}/comments", method: :post) do %>
+        <textarea name="text" placeholder="Comment" rows="2" cols="30"></textarea>
+        <input type="submit" value="SEND">
+      <% end %>
+    <% end %>
+  </div>
+</div>
